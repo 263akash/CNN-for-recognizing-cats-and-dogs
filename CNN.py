@@ -28,13 +28,13 @@ train_datagen = ImageDataGenerator(
 test_datagen = ImageDataGenerator(rescale=1./255)
 
 train_set = train_datagen.flow_from_directory(
-        'D:\\ML\\Learning\Machine Learning A-Z Template Folder\Part 8 - Deep Learning\\Section 40 - Convolutional Neural Networks (CNN)\\Convolutional_Neural_Networks\\dataset\\training_set',
+        'dataset\\training_set',
         target_size=(64, 64),  #target size is the size of images expected in our CNN model
         batch_size=32,
         class_mode='binary')  #we have two class cat and dogs (so binary))
 
 test_set = test_datagen.flow_from_directory(
-        'D:\\ML\Learning\\Machine Learning A-Z Template Folder\\Part 8 - Deep Learning\Section 40 - Convolutional Neural Networks (CNN)\\Convolutional_Neural_Networks\\dataset\\test_set',
+        'dataset\\test_set',
         target_size=(64, 64),
         batch_size=32,
         class_mode='binary')
